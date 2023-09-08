@@ -1,3 +1,5 @@
+vim.g.mapleader = " "--设置主键为空格
+
 local keymap = vim.keymap
 
 --插入模式退出键
