@@ -20,5 +20,9 @@ keymap.set("n", "ff", function()
 end)
 
 -- ---------- 插件 ---------- ---
+-- 切换buffer
+keymap.set("n", "<C-A-L>", ":bnext<CR>")
+keymap.set("n", "<C-A-H>", ":bprevious<CR>")
+
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
