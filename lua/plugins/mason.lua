@@ -23,6 +23,8 @@ config=function()
 require("lspconfig").lua_ls.setup {}
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
+require("lspconfig").cmake.setup{}
+require("lspconfig").pylsp.setup{}
 end
 }
 
