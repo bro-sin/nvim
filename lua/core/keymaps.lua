@@ -1,4 +1,4 @@
-vim.g.mapleader = " "--设置主键为空格
+vim.g.mapleader = " " --设置主键为空格
 
 local keymap = vim.keymap
 
@@ -28,3 +28,18 @@ keymap.set("n", "<leader>h", ":bprevious<CR>")
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+
+-- 设置运行Python快捷键
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "python",
+    callback = function()
+        vim.api.nvim_buf_set_keymap(
+            0,
+            "n",
+            "<leader>r",
+            ":w<CR>:split<CR>:te time python3 %<CR>i",
+            { silent = true, noremap = true }
+        )
+    end
+})
